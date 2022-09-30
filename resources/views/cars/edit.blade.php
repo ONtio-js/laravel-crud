@@ -47,7 +47,7 @@
             @enderror
         </div>
 
-        <button type="submit" class="bg-blue-900 block shadow-5xl p-2 mb-10 text-white w-80 uppercase font-bold">submit</button>
+        <button type="submit" class="bg-green-600 rounded block shadow-5xl p-2 mb-10 text-white w-80 uppercase font-bold">submit</button>
     </form>
 </div>
 </div>

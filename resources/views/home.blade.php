@@ -31,21 +31,19 @@
                 @endif
                 <div class=" m-auto w-4/5 py-10">
                     <div class="pt-10 mb-10">
-                        <a href="{{ route('cars.create') }}" class="border-b2 pb-5 border-dotted italic text-gray-500 ">
-                            add a new car &rarr;
-                        </a>
+                        <a href="{{ route('cars.create') }}" >
+                           <button class="bg-blue-600 block shadow-5xl p-2 text-center rounded mb-10 text-white  uppercase font-bold">add</button></a>
                     </div>
                     @forelse ($cars as $car)
                         @if (Auth::user()->id == $car->user_id)
                             <div class="m-auto">
                                 <div class="float-right">
-                                    <a href="{{ route('cars.edit', $car->id) }}"
-                                        class="border-b2 pb-5 border-dotted italic text-green-500 "> Edit &rarr;</a>
+                                    <a href="{{ route('cars.edit', $car->id) }}"><button class="bg-green-600 block shadow-5xl p-2 rounded mb-10 text-white  uppercase font-bold">Edit</button>  </a>
                                     <form action="{{ route('cars.destroy', $car->id) }}" class="mt-10" method="POST">
                                         @csrf
                                         @method('delete')
                                         <button type="submit"
-                                            class="border-b2 pb-5 border-dotted italic text-red-500">delete &rarr;</button>
+                                            class="bg-red-700 block shadow-5xl p-2 rounded mb-10 text-white  uppercase font-bold">Delete</button>
 
                                     </form>
                                 </div>
@@ -55,8 +53,8 @@
                                 </span>
                                 <img src="{{ asset('images/' . $car->image_path) }}" alt="" srcset=""
                                     class="w-1/6 mt-1 shadow-xl mb-3">
-                                <h2 class="text-gray-700 text-5xl hover:text-green-500">
-                                    <a href="{{ route('cars.show', $car->id) }}"> {{ $car->name }}</a>
+                                <h2 class="text-gray-700 text-5xl hover:text-green-500 ">
+                                    <a href="{{ route('cars.show', $car->id) }}" class="capitalize"> {{ $car->name }}</a>
                                 </h2>
                                 <p class="text-lg text-gray-500 py-6">
                                     {{ $car->description }}

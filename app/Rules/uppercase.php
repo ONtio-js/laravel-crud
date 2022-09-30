@@ -25,7 +25,7 @@ class uppercase implements Rule
      */
     public function passes($attribute, $value)
     {
-        return strtoupper($value) === $value;
+        return strtolower($value) === $value;
     }
 
     /**
@@ -35,6 +35,6 @@ class uppercase implements Rule
      */
     public function message()
     {
-        return 'The :attribute must be Upper case.';
+        return 'The :attribute must be lower case.';
     }
 }

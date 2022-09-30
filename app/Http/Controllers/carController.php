@@ -36,7 +36,7 @@ class carController extends Controller
         // var_dump($cars);
 
         
-        $cars = car::paginate(3);
+        $cars = car::orderBy('id','DESC')->paginate(3);
 
         return view('cars.index',[
             'cars'=>$cars

@@ -16,10 +16,6 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-// Route::get('/', function () {
-//     return view("/cars.index");
-// });
-Route::resource('cars',carController::class);
 
 // Route::get('/',[carController::class,'index']);
 // Route::get('/{id}/edit',[carController::class,'edit']);
@@ -29,6 +25,11 @@ Route::resource('cars',carController::class);
 // Route::delete('/{id}',[carController::class,'destroy']);
 // Route::get('/{id}',[carController::class,'show']);
 
+
+Route::resource('cars',carController::class);
+Route::get('/', function () {
+    return redirect()->route('cars.index');
+});
 Auth::routes();
 
 Route::get('/home', [\App\Http\Controllers\HomeController::class, 'index'])->name('home');
