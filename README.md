@@ -1,5 +1,5 @@
 
-# CARIZ -LARACRUD
+# CARIz -LARACRUD
 
 A crud appilication using laravel framework 
  
