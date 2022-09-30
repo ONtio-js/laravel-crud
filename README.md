@@ -10,7 +10,7 @@ A crud appilication using laravel framework
 ## Run the project
 ### install laravel with :
     - laravel new *my_project* or 
-    - composer create-project -prefer --dist laravel/laravel *my_project*
+    - composer create-project --prefer-dist laravel/laravel *my_project*
 ### server the project
     - php artisan serve
 ## live-version
